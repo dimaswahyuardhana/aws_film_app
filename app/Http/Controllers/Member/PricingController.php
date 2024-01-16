@@ -9,7 +9,7 @@ use App\Models\Package;
 class PricingController extends Controller
 {
     public function index(){
-        $standartPackage = Package::where('name' ,'standart')->first();
+        $standartPackage = Package::where('name' ,'standart')->first(); //where mengambil data pilihan dalam tabel
         $goldPackage = Package::where('name' ,'gold')->first();
 
         return view('member.pricing' ,[

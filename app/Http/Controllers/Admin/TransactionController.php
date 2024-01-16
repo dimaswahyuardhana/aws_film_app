@@ -9,7 +9,7 @@ use App\Models\Transaction;
 class TransactionController extends Controller
 {
     public function index(){
-        $transactions = Transaction::with([
+        $transactions = Transaction::with([ //with untuk mengambil semua data yang terdapat di dalam tabel
             'package',
             'user'
         ])->get();
